@@ -23,7 +23,7 @@ const HeroSection = () => {
       {/* Main Content */}
       <div className="relative h-full flex items-center justify-center">
         <div className="relative z-10 text-center px-4 mt-[-5vh]"> {/* Added negative margin to move up */}
-          <h1 className="text-7xl md:text-7xl lg:text-7xl font-serif mb-6 text-stone-800 drop-shadow-xl tracking-wide">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif mb-6 text-stone-800 drop-shadow-xl tracking-wide">
             Pangaea.Now
           </h1>
           <p className="text-lg md:text-xl font-light text-stone-700 mb-10 drop-shadow-lg max-w-2xl mx-auto tracking-wider">
