@@ -7,17 +7,17 @@ module.exports = {
     extend: {
       colors: {
         primary: {
-          DEFAULT: '#4A90E2',
-          50: '#EBF3FC',
-          100: '#D7E8F9',
-          200: '#B0D1F4',
-          300: '#88BAEF',
-          400: '#61A3EA',
-          500: '#4A90E2',
-          600: '#3576C4',
-          700: '#2A5C9B',
-          800: '#1F4372',
-          900: '#142949',
+          DEFAULT: '#78716c',
+          50: '#fafaf9',
+          100: '#f5f5f4',
+          200: '#e7e5e4',
+          300: '#d6d3d1',
+          400: '#a8a29e',
+          500: '#78716c',
+          600: '#57534e',
+          700: '#44403c',
+          800: '#292524',
+          900: '#1c1917',
         },
         neutral: {
           50: '#F8FAFC',
@@ -30,7 +30,18 @@ module.exports = {
           700: '#334155',
           800: '#1E293B',
           900: '#0F172A',
-        }
+        },
+        custom: {
+          gray: '#8d847d',
+          'gray-light': '#a59e98',
+          'gray-dark': '#756c66',
+          brown: '#915228',
+          'brown-light': '#a66a3e',
+          'brown-dark': '#784321',
+          warm: '#9a8e85',
+          'warm-light': '#b2a79f',
+          'warm-dark': '#82766e',
+        },
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],

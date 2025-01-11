@@ -37,6 +37,8 @@
 @layer base {
   html {
     @apply antialiased text-neutral-800 scroll-smooth;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
   }
 
   body {
@@ -89,7 +91,8 @@
   }
 }
 
-/* Custom Scrollbar */
+/* Remove old scrollbar styles */
+/* Delete these:
 ::-webkit-scrollbar {
   @apply w-2;
 }
@@ -101,3 +104,4 @@
 ::-webkit-scrollbar-thumb {
   @apply bg-neutral-300 rounded-full hover:bg-neutral-400 transition-colors;
 }
+*/

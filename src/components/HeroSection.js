@@ -1,22 +1,45 @@
 import React from 'react';
-import { Globe } from 'lucide-react';
 
-const HeroSection = () => (
-  <div className="relative overflow-hidden bg-white">
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
-      <div className="text-center">
-        <Globe className="w-24 h-24 mx-auto text-blue-600 animate-float" />
-        <h1 className="mt-8 text-5xl font-extrabold text-gray-900 sm:text-6xl md:text-7xl tracking-tight">
-          <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600">
-            PangeaNow
-          </span>
-        </h1>
-        <p className="mt-6 max-w-md mx-auto text-xl text-gray-600 sm:text-2xl md:mt-8 md:max-w-3xl">
-          Unifying Business & Technology Through Expert Consulting
-        </p>
+const HeroSection = () => {
+  const scrollToServices = () => {
+    document.getElementById('services-section')?.scrollIntoView({ 
+      behavior: 'smooth',
+      block: 'start'
+    });
+  };
+
+  return (
+    <div className="relative w-full h-screen">
+      {/* Navigation */}
+      <nav className="absolute top-0 w-full p-6 flex justify-between items-center text-stone-800 z-20">
+        <button className="text-base font-light hover:text-stone-700">Menu</button>
+        <div className="text-base font-light">AI·BI</div>
+        <div className="flex gap-4 items-center">
+         {/*  <button className="text-base font-light hover:text-stone-700">Cart (0)</button>*/}
+          <button className="text-base font-light hover:text-stone-700">About</button>
+        </div>
+      </nav>
+
+      {/* Main Content */}
+      <div className="relative h-full flex items-center justify-center">
+        <div className="relative z-10 text-center px-4 mt-[-5vh]"> {/* Added negative margin to move up */}
+          <h1 className="text-7xl md:text-7xl lg:text-7xl font-serif mb-6 text-stone-800 drop-shadow-xl tracking-wide">
+            Pangaea.Now
+          </h1>
+          <p className="text-lg md:text-xl font-light text-stone-700 mb-10 drop-shadow-lg max-w-2xl mx-auto tracking-wider">
+            Advancing Human-AI Collaboration
+          </p>
+          <button 
+            onClick={scrollToServices}
+            className="bg-stone-800 text-stone-100 px-7 py-2.5 rounded-full text-base 
+                     font-light hover:bg-stone-700 transition-colors duration-300 
+                     shadow-xl hover:shadow-2xl transform hover:-translate-y-0.5">
+            Explore Now
+          </button>
+        </div>
       </div>
     </div>
-  </div>
-);
+  );
+};
 
 export default HeroSection;
