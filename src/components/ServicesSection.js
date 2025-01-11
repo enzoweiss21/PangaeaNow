@@ -21,20 +21,24 @@ const services = [
 ];
 
 const ServicesSection = () => (
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-    <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
-      Our Services
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+    <h2 className="text-4xl font-bold text-center text-gray-900 mb-16">
+      <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600">
+        Our Services
+      </span>
     </h2>
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
       {services.map((service, index) => (
         <Card
           key={index}
-          className="border-2 hover:border-blue-500 transition-all duration-300"
+          className="border border-gray-100 hover:border-blue-500 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
         >
-          <CardContent className="p-6 text-center">
-            <div className="flex justify-center mb-4">{service.icon}</div>
-            <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
-            <p className="text-gray-600">{service.description}</p>
+          <CardContent className="p-8 text-center">
+            <div className="flex justify-center mb-6 transform transition-transform group-hover:scale-110">
+              {service.icon}
+            </div>
+            <h3 className="text-2xl font-semibold mb-4">{service.title}</h3>
+            <p className="text-gray-600 leading-relaxed">{service.description}</p>
           </CardContent>
         </Card>
       ))}

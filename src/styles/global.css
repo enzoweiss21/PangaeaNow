@@ -1,15 +1,103 @@
-/* styles/global.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-body {
-    font-family: 'Inter', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+
+@layer components {
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary-500 to-primary-700;
   }
-  
-  button {
-    font-size: 1rem;
-    cursor: pointer;
+
+  .card-hover {
+    @apply transition-all duration-300 ease-out border border-neutral-200 rounded-xl bg-white
+           hover:-translate-y-1 hover:shadow-soft hover:border-primary-200;
   }
+
+  .button-primary {
+    @apply px-6 py-3 rounded-xl font-medium text-white 
+           bg-gradient-to-r from-primary-500 to-primary-600
+           hover:shadow-soft hover:-translate-y-0.5 hover:from-primary-600 hover:to-primary-700
+           active:translate-y-0 
+           transition-all duration-300 ease-out;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-3 rounded-xl text-neutral-800
+           border border-neutral-200 bg-white
+           hover:border-neutral-300
+           focus:border-primary-300 focus:ring-4 focus:ring-primary-100
+           focus:outline-none
+           transition duration-200 ease-out;
+  }
+
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24;
+  }
+}
+
+@layer base {
+  html {
+    @apply antialiased text-neutral-800 scroll-smooth;
+  }
+
+  body {
+    @apply m-0 p-0 bg-white min-h-screen;
+  }
+
+  h1 {
+    @apply text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight;
+  }
+
+  h2 {
+    @apply text-3xl sm:text-4xl font-bold tracking-tight;
+  }
+
+  h3 {
+    @apply text-2xl sm:text-3xl font-semibold;
+  }
+
+  p {
+    @apply text-neutral-600 leading-relaxed;
+  }
+
+  a {
+    @apply text-primary-600 hover:text-primary-700 transition-colors duration-200;
+  }
+}
+
+.section-padding {
+  @apply py-16 px-4 sm:py-24 sm:px-6 lg:px-8;
+}
+
+.container-width {
+  @apply max-w-7xl mx-auto;
+}
+
+@screen sm {
+  .button-primary {
+    @apply px-4 py-2 text-sm;
+  }
+}
+
+/* Mobile Optimizations */
+@media (max-width: 640px) {
+  .section-container {
+    @apply py-12 px-4;
+  }
+
+  .button-primary {
+    @apply w-full justify-center;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  @apply w-2;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-neutral-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-neutral-300 rounded-full hover:bg-neutral-400 transition-colors;
+}
